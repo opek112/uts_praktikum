@@ -114,17 +114,16 @@ Port 5000 dipasang secara tetap agar URL dan asal penyimpanan Local Storage / Sh
 
 ## 3. Status Acceptance Criteria
 
-| Kriteria | Status | catatan |
+| Kriteria | Status | Cara menguji / catatan |
 |---|---|---|
-| A. Telepon 360 px tanpa overflow | Berhasil / Belum | Berhasil |
-| B. Tablet >= 700 px dua kolom | Berhasil / Belum | Berhasil |
-| C. Validasi judul dan mata kuliah | Berhasil / Belum | Berhasil |
-| D. Navigasi detail, Simpan, Batal | Berhasil / Belum | Berhasil |
-| E. Tambah dan ubah status langsung terlihat | Berhasil / Belum | Berhasil |
-| F. Loading, empty, data, error, Coba Lagi | Berhasil / Belum | Berhasil |
-| G. Data bertahan setelah aplikasi ditutup | Berhasil / Belum | Berhasil |
-| H. Verifikasi dan bukti | Berhasil / Belum | Berhasil |
-
+| A. Telepon 360 px tanpa overflow | Berhasil | Lebar jendela 360 px dengan judul panjang; teks terpotong "..." tanpa garis overflow |
+| B. Tablet >= 700 px dua kolom | Berhasil | Lebar jendela 700 px atau lebih; kartu tersusun dua kolom |
+| C. Validasi judul dan mata kuliah | Berhasil | Field kosong dan field berisi spasi saja ditolak dengan pesan validasi |
+| D. Navigasi detail, Simpan, Batal | Berhasil | Detail menampilkan tugas yang diketuk; Simpan menambah daftar; Batal tidak mengubah daftar |
+| E. Tambah dan ubah status langsung terlihat | Berhasil | Kartu dan ringkasan langsung berubah setelah tambah tugas dan ubah status |
+| F. Loading, empty, data, error, Coba Lagi | Berhasil | Keempat kondisi tampil; error diuji dari menu simulasi dan Coba lagi memuat ulang |
+| G. Data bertahan setelah aplikasi ditutup | Berhasil | Diuji dengan web-server port 5000; tugas dan status tetap ada setelah dibuka kembali |
+| H. Verifikasi dan bukti | Berhasil | `flutter analyze` dan `flutter test` dicatat beserta penyebab; screenshot terlampir |
 ---
 
 ## 4. Ringkasan Satu Alur Kode
