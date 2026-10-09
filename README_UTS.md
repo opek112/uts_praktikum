@@ -3,9 +3,9 @@
 | | |
 |---|---|
 | Nama | Taufiq Hidayat |
-| NIM | (isi NIM) |
+| NIM | 362558302103 |
 | Aplikasi | Tugas Praktikum (pencatat tugas) |
-| Tanggal | (isi tanggal ujian) |
+| Tanggal | 6 Oktober 2026 |
 
 ---
 
@@ -32,6 +32,7 @@ sehingga teks hanya memakai sisa lebar setelah tombol status. Judul dibatasi
 `maxLines: 2` dan mata kuliah `maxLines: 1` dengan
 `overflow: TextOverflow.ellipsis`, jadi teks yang panjang terpotong dengan
 tanda "..." dan tidak melebihi tinggi kartu (`mainAxisExtent: 150`).
+
 ### Soal 2 - Form, validasi, dan navigasi (KAD-2)
 Form tambah tugas (`TaskFormScreen`) memakai widget `Form` dengan
 `GlobalKey<FormState>` dan dua `TextFormField`, yaitu judul tugas dan mata
@@ -113,16 +114,16 @@ Port 5000 dipasang secara tetap agar URL dan asal penyimpanan Local Storage / Sh
 
 ## 3. Status Acceptance Criteria
 
-| Kriteria | Status | Cara menguji / catatan |
+| Kriteria | Status | catatan |
 |---|---|---|
-| A. Telepon 360 px tanpa overflow | Berhasil / Belum | |
-| B. Tablet >= 700 px dua kolom | Berhasil / Belum | |
-| C. Validasi judul dan mata kuliah | Berhasil / Belum | |
-| D. Navigasi detail, Simpan, Batal | Berhasil / Belum | |
-| E. Tambah dan ubah status langsung terlihat | Berhasil / Belum | |
-| F. Loading, empty, data, error, Coba Lagi | Berhasil / Belum | |
-| G. Data bertahan setelah aplikasi ditutup | Berhasil / Belum | |
-| H. Verifikasi dan bukti | Berhasil / Belum | |
+| A. Telepon 360 px tanpa overflow | Berhasil / Belum | Berhasil |
+| B. Tablet >= 700 px dua kolom | Berhasil / Belum | Berhasil |
+| C. Validasi judul dan mata kuliah | Berhasil / Belum | Berhasil |
+| D. Navigasi detail, Simpan, Batal | Berhasil / Belum | Berhasil |
+| E. Tambah dan ubah status langsung terlihat | Berhasil / Belum | Berhasil |
+| F. Loading, empty, data, error, Coba Lagi | Berhasil / Belum | Berhasil |
+| G. Data bertahan setelah aplikasi ditutup | Berhasil / Belum | Berhasil |
+| H. Verifikasi dan bukti | Berhasil / Belum | Berhasil |
 
 ---
 
@@ -150,7 +151,7 @@ Menambah tugas baru hingga tersimpan dan muncul kembali saat aplikasi dibuka ula
 
 3. Uji Persistensi: Centang tugas dan tambah tugas baru, keluar dari browser dan menggunakan port yang sama untuk menjalankan aplikasi lagi. Hasil: Seluruh data dan status centang tetap bertahan.
 
-4. Uji Simulasi Error: Mengaktifkan titik tiga di pojok kanan pada menu simulasi lalu tekan coba lagi. Hasil: Error state dan tombol "Coba Lagi" tampil dengan benar.
+4. Uji Simulasi Error: Membuka menu titik tiga di pojok kanan atas, memilih "Simulasikan error saat memuat", lalu menekan tombol "Coba lagi". Hasil: pesan error dan tombol "Coba lagi" tampil, dan setelah ditekan daftar termuat kembali.
 
 ### Keluaran `flutter analyze`
 ```
@@ -204,6 +205,7 @@ Catatan penyebab: Berkas test/widget_test.dart bawaan dari perintah flutter crea
 
 ![Tampilan telepon](screenshots/tampilan_mobile.png)
 ![Tampilan tablet](screenshots/tampilan_tablet.png)
+
 ---
 
 ## 6. Error yang Tersisa
