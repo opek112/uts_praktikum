@@ -43,7 +43,11 @@ class TaskCard extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 7),
-                    Text(task.course),
+                    Text(
+                      task.course,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                     const SizedBox(height: 10),
                     Container(
                       padding: const EdgeInsets.symmetric(
