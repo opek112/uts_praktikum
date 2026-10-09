@@ -151,17 +151,14 @@ Expected: exactly one matching candidate
 ```
 Catatan penyebab: Berkas test/widget_test.dart bawaan dari perintah flutter create adalah tes standar untuk aplikasi bawaan Counter App (yang mencari widget angka "0" dan ikon +). Karena aplikasi UTS ini adalah Task Tracker (bukan Counter App), maka pengujian otomatis tersebut gagal (Test Failure). Sesuai instruksi ujian bahwa file starter/bawaan tidak boleh dihapus, file tes ini tetap dipertahankan.
 ### Screenshot
-- Ukuran telepon: `(/screenshots/tampilan_mobile.PNG)`
-- Ukuran tablet: `(/screenshots/tampilan_tablet.PNG)`
+- Ukuran telepon: `(\screenshots\tampilan_mobile.PNG)`
+- Ukuran tablet: `(\screenshots\tampilan_tablet.PNG)`
 
 ---
 
 ## 6. Error yang Tersisa
 
-| Error / warning | Penyebab | Rencana perbaikan |
-|arning unused_field (_memory)|Variabel bawaan starter tidak terpakai karena penyimpanan menggunakan SharedPreferences.|Dibiarkan karena aturan ujian melarang menghapus berkas/kode starter.|
-|test Failure pada widget_test.dart |File tes bawaan flutter create menguji aplikasi Counter bawaan, bukan aplikasi Task Tracker. |Menyesuaikan isi widget_test.dart dengan UI Task Tracker jika instruksi ujian memperbolehkan mengubah file tes. |
-
+warning unused_field (_memory) karena Variabel bawaan starter tidak terpakai karena penyimpanan menggunakan SharedPreferences. untuk mempertbaikinya mungkin diberi komen saja itu karena aturan ujian melarang menghapus berkas/kode starter.
 ---
 
 ## 7. Daftar Berkas yang Dikumpulkan
